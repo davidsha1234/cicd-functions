@@ -1,3 +1,7 @@
 {
-  "task1_function_endpoint": "http://myfuncappagain.azurewebsites.net/api/http_trigger"
+  "github_username": "davidsha1234",
+  "repository": "cicd-functions",
+  "token": "${PAT_ENV_VARIABLE}",
+  "function_app_name": "myguncappagain",
+  "task3_function_endpoint": "http://myfuncappagain.azurewebsites.net/api/http_trigger"
 }
