@@ -1,0 +1,21 @@
+on:
+  pull_request:
+    branches: [main]
+    types: [closed]
+
+jobs:
+  # This workflow contains a single job called "swap-function"
+  swap-function:
+    # The swap action can only be triggered when a pull request is from develop branch
+    if: ${{ github.head_ref == 'develop' }}
+    # The type of runner that the job will run on
+    runs-on: self-hosted
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v4
+
+      - name: 'Swap the Azure Function'
+        run: |
+          az functionapp deployment slot swap -g new_app_rg -n myfuncappagain --slot staging --target-slot production

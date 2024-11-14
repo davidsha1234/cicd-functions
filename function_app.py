@@ -34,7 +34,6 @@ def http_trigger(req: func.HttpRequest) -> func.HttpResponse:
              mimetype="application/json"
         )
 
-# You will only make modifications to the function below
 def analyze_number(num):
     # TODO 1: Code Logic to handle number validation
     try:
@@ -71,12 +70,19 @@ def analyze_number(num):
                 divisors_sum += i
         is_perfect = divisors_sum == num
 
-    # TODO 6: Replace default values below with the results of the calculations from TODOs 2-5.
+    # TODO 6: Code Logic to check whether number is triangular
+    is_triangular = False
+    if num > 0:
+        n = (-1 + (1 + 8 * num) ** 0.5) / 2
+        is_triangular = n.is_integer()
+
+    # TODO 7: Replace default values below with the results of the calculations from TODOs 2-6.
     response = {
         "sum_of_digits": sum_of_digits,
         "is_prime": is_prime,
         "is_odd": is_odd,
-        "is_perfect": is_perfect
+        "is_perfect": is_perfect,
+        "is_triangular": is_triangular
     }
 
     return response
