@@ -1,3 +1,3 @@
 {
-  "task1_function_endpoint": "https://myfuncappagain.azurewebsites.net/api/http_trigger"
+  "task1_function_endpoint": "http://myfuncappagain.azurewebsites.net/api/http_trigger"
 }
