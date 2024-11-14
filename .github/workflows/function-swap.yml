@@ -18,4 +18,4 @@ jobs:
 
       - name: 'Swap the Azure Function'
         run: |
-          az functionapp deployment slot swap -g new_app_rg -n myfuncappagain --slot staging --target-slot production
+          az functionapp deployment slot swap -g functionappRG -n myfuncappagain --slot staging --target-slot production
