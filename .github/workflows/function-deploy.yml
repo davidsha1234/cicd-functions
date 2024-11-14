@@ -3,9 +3,7 @@
 name: Build and Deploy Job
    
 on:
-  push:
-    branches: ["main"]
- 
+
   pull_request: 
     branches: [develop]
     types: [closed]
