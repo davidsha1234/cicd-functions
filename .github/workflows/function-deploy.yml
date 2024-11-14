@@ -3,9 +3,7 @@
 name: Build and Deploy Job
    
 on:
-  push:
-    branches: ["main"]
- 
+
   pull_request: 
     branches: [develop]
     types: [closed]
@@ -39,6 +37,6 @@ jobs:
         with:
           app-name: ${{ env.AZURE_FUNCTIONAPP_NAME }}
           package: .
-          publish-profile: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE }}
+          publish-profile: ${{ secrets.AZURE_FUNCTIONAPP_STAGING_PUBLISH_PROFILE }}
           scm-do-build-during-deployment: true
           enable-oryx-build: true
